@@ -4,8 +4,8 @@
   "type": "commonjs",
   "name": "astrologger",
   "homepage": "https://astrohelm.ru",
-  "description": "Astrohelm workspace example",
-  "author": "Alexander Ivanov <sashapop101@gmail.com>",
+  "description": "Astrohelm logger",
+  "author": "Maksim Zhdankin <maks.zhdankin@inbox.ru>",
   "keywords": [],
 
   "main": "index.js",
@@ -26,7 +26,7 @@
   "repository": { "type": "git", "url": "git+https://github.com/astrohelm/astrologger.git" },
   "bugs": {
     "url": "https://github.com/astrohelm/astrologger/issues",
-    "email": "sashapop101@gmail.com"
+    "email": "maks.zhdankin@inbox.ru"
   },
 
   "devDependencies": {
