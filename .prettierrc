@@ -1,6 +1,6 @@
 {
   "endOfLine": "lf",
-  "arrowParens": "always",
+  "arrowParens": "avoid",
   "bracketSameLine": true,
   "bracketSpacing": true,
   "trailingComma": "all",

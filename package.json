@@ -7,36 +7,43 @@
   "description": "Astrohelm logger",
   "author": "Maksim Zhdankin <maks.zhdankin@inbox.ru>",
   "keywords": [],
-
   "main": "index.js",
   "types": "types/index.d.ts",
   "packageManager": "npm@9.6.4",
   "readmeFilename": "README.md",
-  "engines": { "node": "18 || 19 || 20" },
+  "engines": {
+    "node": "18 || 19 || 20"
+  },
   "browser": {},
-  "files": ["/lib", "/types"],
-
+  "files": [
+    "/lib",
+    "/types"
+  ],
   "scripts": {
     "test": "node --test && tsc",
     "dev": "node index.js",
     "prettier:fix": "prettier --write \"**/*.{js,ts,json,html,cjs,md,yaml}\"",
     "eslint:fix": "eslint --fix \"**/*.{js,ts}\""
   },
-
-  "repository": { "type": "git", "url": "git+https://github.com/astrohelm/astrologger.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astrohelm/astrologger.git"
+  },
   "bugs": {
     "url": "https://github.com/astrohelm/astrologger/issues",
     "email": "maks.zhdankin@inbox.ru"
   },
-
   "devDependencies": {
-    "@types/node": "^20.5.3",
+    "@types/node": "^20.5.4",
     "eslint": "^8.47.0",
-    "eslint-config-astrohelm": "^1.1.0",
+    "eslint-config-astrohelm": "^1.1.1",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.2",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "astropack": "^0.1.1"
   }
 }
