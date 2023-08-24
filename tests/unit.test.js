@@ -28,5 +28,6 @@ test('First test', () => {
   };
   setTimeout(() => {
     deleteLogFile(opts.path);
+    process.exit(0);
   }, 5000);
 });
