@@ -1,5 +1,5 @@
 'use strict';
 
-const lib = require('./lib');
+const createLogger = require('./lib');
 
-module.exports = { lib };
+module.exports = { createLogger };
