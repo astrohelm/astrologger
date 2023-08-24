@@ -1,5 +1,5 @@
 'use strict';
 
-const Logger = require('./lib');
+const createLogger = require('./lib');
 
-module.exports = { Logger, createLogger: () => new Logger() };
+module.exports = { createLogger };
