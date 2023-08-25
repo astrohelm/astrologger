@@ -5,29 +5,18 @@ const fs = require('fs');
 const assert = require('node:assert');
 const { createLogger } = require('..');
 test('First test', () => {
-  const opts = {
-    path: './log',
-    writeInterval: 100,
+  const loggerConfig = {
+    path: './logs',
+    writeInterval: 3000,
     writeBuffer: 64 * 1024,
-    keepDays: 0,
+    keepDays: 14,
     json: false,
   };
 
-  const astrolog = createLogger(opts);
+  const astrolog = createLogger(loggerConfig);
 
-  astrolog.log('Пример лога');
-  astrolog.info('Пример информационного лога');
+  astrolog.info('Пример лога');
   astrolog.warn('Пример предупреждения');
   astrolog.error('Пример ошибки');
-  const deleteLogFile = (logFile) => {
-    fs.rmSync(logFile, { recursive: true }, (err) => {
-      err
-        ? console.error(`Ошибка при удалении файла логов: ${err}`)
-        : console.info(`Файл логов ${logFile} успешно удален.`);
-    });
-  };
-  setTimeout(() => {
-    deleteLogFile(opts.path);
-    process.exit(0);
-  }, 3000);
+  astrolog.close();
 });
