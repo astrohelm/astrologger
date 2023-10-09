@@ -1,10 +1,31 @@
 // all exports = module.exports items
-type TMethods = 'LOG' | 'INFO' | 'WARN' | 'ERROR';
-type TConfig = {
-  path: string;
-  writeInterval: number;
-  writeBuffer: number;
-  keepDays: number;
-  json: boolean;
-};
-export const createLogger: (config: TConfig) => { [key: TMethods]: (message: string) => void };
+
+
+
+interface TFileOptions {
+  buffer?: number;
+  interval?: number;
+  format?:
+}
+
+interface TFile {
+  constructor(options: TFileOptions);
+}
+
+interface TOptions {
+  transports: [],
+  methods: {},
+  format: any,
+  meta: any,
+}
+
+type TLevel = 'trace' | 'debug' | 'info' | 'warn' | 'error' | 'fatal' | 'silent'
+
+interface Logger {
+  static transport(params: any): Transport;
+  constructor(options: TOptions);
+  child(meta: object): Logger;
+  meta(): unknown;
+}
+
+
