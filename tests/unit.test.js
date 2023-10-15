@@ -14,9 +14,7 @@ test('First test', () => {
   };
 
   const astrolog = createLogger(loggerConfig);
-
-  astrolog.info('Пример лога');
-  astrolog.warn('Пример предупреждения');
-  astrolog.error('Пример ошибки');
+  astrolog.info("a");
+  astrolog.error(new Error('1213'));
   astrolog.close();
 });
